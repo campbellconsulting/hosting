@@ -1,147 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Alumnus - Collegiate Recruitment Platform</title>
-	<meta content="Alumnus - Collegiate Recruitment Platform" name="description">
-	<meta content="admin, admin dashboard, admin template, cms, crm, Alumnus Admin, Alumnusadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" name="keywords">
-	<meta content="IR" name="author"><!-- Favicon -->
-	<link href="favicon.ico" rel="shortcut icon">
-	<link href="favicon.ico" rel="icon" type="image/x-icon"><!-- Morris Charts CSS -->
-	<link href="https://campbellconsulting.github.io/hosting/vendors/bower_components/morris.js/morris.css" rel="stylesheet" type="text/css"><!-- Data table CSS -->
-	<link href="https://campbellconsulting.github.io/hosting/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
-	<link href="https://campbellconsulting.github.io/hosting/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css"><!-- Custom CSS -->
+	<meta name="description" content="Alumnus - Collegiate Recruitment Platform" />
+	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Alumnus Admin, Alumnusadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
+	<meta name="author" content="IR"/>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	
+	<!-- Morris Charts CSS -->
+    <link href="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/morris.js/morris.css" rel="stylesheet" type="text/css"/>
+	
+	<!-- Data table CSS -->
+	<link href="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+	
+	<link href="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+		
+	<!-- Custom CSS -->
 	<link href="https://campbellconsulting.github.io/hosting/dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 	<!-- Preloader -->
 	<div class="preloader-it">
 		<div class="la-anim-1"></div>
-	</div><!-- /Preloader -->
-	<div class="wrapper theme-5-active pimary-color-red">
+	</div>
+	<!-- /Preloader -->
+    <div class="wrapper theme-5-active pimary-color-red">
 		<!-- Top Menu Items -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="mobile-only-brand pull-left">
 				<div class="nav-header pull-left">
 					<div class="logo-wrap">
-						<a href="index.html"><img alt="brand" class="brand-img" src="https://campbellconsulting.github.io/hosting/dist/img/logo.png"> <span class="brand-text">Alumnus</span></a>
+						<a href="index.html">
+							<img class="brand-img" src="https://campbellconsulting.github.io/hosting/dist/img/logo.png" alt="brand"/>
+							<span class="brand-text">Alumnus</span>
+						</a>
 					</div>
-				</div><a class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);" id="toggle_nav_btn"><i class="zmdi zmdi-menu"></i></a> <a class="mobile-only-view" data-target="#search_form" data-toggle="collapse" href="javascript:void(0);" id="toggle_mobile_search"><i class="zmdi zmdi-search"></i></a> <a class="mobile-only-view" href="javascript:void(0);" id="toggle_mobile_nav"><i class="zmdi zmdi-more"></i></a>
-				<form class="top-nav-search collapse pull-left" id="search_form" name="search_form" role="search">
+				</div>	
+				<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="zmdi zmdi-menu"></i></a>
+				<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
+				<a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
+				<form id="search_form" role="search" class="top-nav-search collapse pull-left">
 					<div class="input-group">
-						<input class="form-control" name="example-input1-group2" placeholder="Search" type="text"> <span class="input-group-btn"><button aria-expanded="true" aria-label="Close" class="btn btn-default" data-target="#search_form" data-toggle="collapse" type="button"><span class="input-group-btn"><i class="zmdi zmdi-search"></i></span></button></span>
+						<input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+						<span class="input-group-btn">
+						<button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
+						</span>
 					</div>
 				</form>
 			</div>
-			<div class="mobile-only-nav pull-right" id="mobile_only_nav">
+			<div id="mobile_only_nav" class="mobile-only-nav pull-right">
 				<ul class="nav navbar-right top-nav pull-right">
 					<li>
-						<a href="#" id="open_right_sidebar"><i class="zmdi zmdi-settings top-nav-icon"></i></a>
+						<a id="open_right_sidebar" href="#"><i class="zmdi zmdi-settings top-nav-icon"></i></a>
 					</li>
 					<li class="dropdown app-drp">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="zmdi zmdi-apps top-nav-icon"></i></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="zmdi zmdi-apps top-nav-icon"></i></a>
 						<ul class="dropdown-menu app-dropdown" data-dropdown-in="slideInRight" data-dropdown-out="flipOutX">
 							<li>
 								<div class="app-nicescroll-bar">
 									<ul class="app-icon-wrap pa-10">
 										<li>
-											<a class="connection-item" href="inbox.html"><i class="zmdi zmdi-email-open txt-success"></i> <span class="block">e-mail</span></a>
+											<a href="inbox.html" class="connection-item">
+											<i class="zmdi zmdi-email-open txt-success"></i>
+											<span class="block">e-mail</span>
+											</a>
 										</li>
 										<li>
-											<a class="connection-item" href="calendar.html"><i class="zmdi zmdi-calendar-check txt-primary"></i> <span class="block">calendar</span></a>
+											<a href="calendar.html" class="connection-item">
+											<i class="zmdi zmdi-calendar-check txt-primary"></i>
+											<span class="block">calendar</span>
+											</a>
 										</li>
 										<li>
-											<a class="connection-item" href="chats.html"><i class="zmdi zmdi-comment-outline txt-warning"></i> <span class="block">chat</span></a>
+											<a href="chats.html" class="connection-item">
+											<i class="zmdi zmdi-comment-outline txt-warning"></i>
+											<span class="block">chat</span>
+											</a>
+										</li>
+                                        <li>
+											<a href="file-manager.html" class="connection-item">
+											<i class="zmdi zmdi-smartphone-setup txt-primary"></i>
+											<span class="block">files</span>
+											</a>
 										</li>
 										<li>
-											<a class="connection-item" href="file-manager.html"><i class="zmdi zmdi-smartphone-setup txt-primary"></i> <span class="block">files</span></a>
+											<a href="contact-card.html" class="connection-item">
+											<i class="zmdi zmdi-assignment-account"></i>
+											<span class="block">contact</span>
+											</a>
 										</li>
-										<li>
-											<a class="connection-item" href="contact-card.html"><i class="zmdi zmdi-assignment-account"></i> <span class="block">contact</span></a>
+                                        		<li>
+											<a href="todo-tasklist.html" class="connection-item">
+											<i class="zmdi zmdi-filter-list txt-primary"></i>
+											<span class="block">To Do</span>
+											</a>
 										</li>
-										<li>
-											<a class="connection-item" href="todo-tasklist.html"><i class="zmdi zmdi-filter-list txt-primary"></i> <span class="block">To Do</span></a>
-										</li>
+                                        	
 									</ul>
-								</div>
+								</div>	
 							</li>
 						</ul>
 					</li>
+				
 					<li class="dropdown alert-drp">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="zmdi zmdi-notifications top-nav-icon"></i><span class="top-nav-icon-badge">5</span></a>
-						<ul class="dropdown-menu alert-dropdown" data-dropdown-in="bounceIn" data-dropdown-out="bounceOut">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="zmdi zmdi-notifications top-nav-icon"></i><span class="top-nav-icon-badge">5</span></a>
+						<ul  class="dropdown-menu alert-dropdown" data-dropdown-in="bounceIn" data-dropdown-out="bounceOut">
 							<li>
 								<div class="notification-box-head-wrap">
-									<span class="notification-box-head pull-left inline-block">notifications</span> <a class="txt-danger pull-right clear-notifications inline-block" href="javascript:void(0)">clear all</a>
+									<span class="notification-box-head pull-left inline-block">notifications</span>
+									<a class="txt-danger pull-right clear-notifications inline-block" href="javascript:void(0)"> clear all </a>
 									<div class="clearfix"></div>
-									<hr class="light-grey-hr ma-0">
+									<hr class="light-grey-hr ma-0"/>
 								</div>
 							</li>
 							<li>
 								<div class="streamline message-nicescroll-bar">
 									<div class="sl-item">
 										<a href="javascript:void(0)">
-										<div class="icon bg-green">
-											<i class="zmdi zmdi-flag"></i>
-										</div>
-										<div class="sl-content">
-											<span class="inline-block capitalize-font pull-left truncate head-notifications">New profile created</span> <span class="inline-block font-11 pull-right notifications-time">2pm</span>
-											<div class="clearfix"></div>
-											<p class="truncate">A new applicant was added via form capture.</p>
-										</div></a>
-									</div>
-									<hr class="light-grey-hr ma-0">
-									<div class="sl-item">
-										<a href="javascript:void(0)">
-										<div class="icon bg-yellow">
-											<i class="zmdi zmdi-trending-down"></i>
-										</div>
-										<div class="sl-content">
-											<span class="inline-block capitalize-font pull-left truncate head-notifications txt-warning">Campaign Ended</span> <span class="inline-block font-11 pull-right notifications-time">1pm</span>
-											<div class="clearfix"></div>
-											<p class="truncate">A recent campaign High School Career Fair has ended.</p>
-										</div></a>
-									</div>
-									<hr class="light-grey-hr ma-0">
-									<div class="sl-item">
-										<a href="javascript:void(0)">
-										<div class="icon bg-blue">
-											<i class="zmdi zmdi-email"></i>
-										</div>
-										<div class="sl-content">
-											<span class="inline-block capitalize-font pull-left truncate head-notifications">2 new messages</span> <span class="inline-block font-11 pull-right notifications-time">4pm</span>
-											<div class="clearfix"></div>
-											<p class="truncate">2 new messages from Terry McGuire.</p>
-										</div></a>
-									</div>
-									<div class="streamline message-nicescroll-bar">
-										<div class="sl-item">
-											<a href="javascript:void(0)">
 											<div class="icon bg-green">
 												<i class="zmdi zmdi-flag"></i>
 											</div>
 											<div class="sl-content">
-												<span class="inline-block capitalize-font pull-left truncate head-notifications">New form created</span> <span class="inline-block font-11 pull-right notifications-time">2pm</span>
+												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
+												New profile created</span>
+												<span class="inline-block font-11  pull-right notifications-time">2pm</span>
+												<div class="clearfix"></div>
+												<p class="truncate">A new applicant was added via form capture.</p>
+											</div>
+										</a>	
+									</div>
+									<hr class="light-grey-hr ma-0"/>
+									<div class="sl-item">
+										<a href="javascript:void(0)">
+											<div class="icon bg-yellow">
+												<i class="zmdi zmdi-trending-down"></i>
+											</div>
+											<div class="sl-content">
+												<span class="inline-block capitalize-font  pull-left truncate head-notifications txt-warning">Campaign Ended</span>
+												<span class="inline-block font-11 pull-right notifications-time">1pm</span>
+												<div class="clearfix"></div>
+												<p class="truncate">A recent campaign High School Career Fair has ended.</p>
+											</div>
+										</a>	
+									</div>
+									<hr class="light-grey-hr ma-0"/>
+									<div class="sl-item">
+										<a href="javascript:void(0)">
+											<div class="icon bg-blue">
+												<i class="zmdi zmdi-email"></i>
+											</div>
+											<div class="sl-content">
+												<span class="inline-block capitalize-font  pull-left truncate head-notifications">2 new messages</span>
+												<span class="inline-block font-11  pull-right notifications-time">4pm</span>
+												<div class="clearfix"></div>
+												<p class="truncate"> 2 new messages from Terry McGuire.</p>
+											</div>
+										</a>	
+									</div>
+									
+                                    <div class="streamline message-nicescroll-bar">
+									<div class="sl-item">
+										<a href="javascript:void(0)">
+											<div class="icon bg-green">
+												<i class="zmdi zmdi-flag"></i>
+											</div>
+											<div class="sl-content">
+												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
+												New form created</span>
+												<span class="inline-block font-11  pull-right notifications-time">2pm</span>
 												<div class="clearfix"></div>
 												<p class="truncate">A new form was created for Fall Open House.</p>
-											</div></a>
-										</div>
-										<hr class="light-grey-hr ma-0">
+											</div>
+										</a>	
 									</div>
-								</div>
+                                    
+
+									<hr class="light-grey-hr ma-0"/>
+                                    </div></div>
 							</li>
 							<li>
 								<div class="notification-box-bottom-wrap">
-									<hr class="light-grey-hr ma-0">
-									<a class="block text-center read-all" href="javascript:void(0)">read all</a>
+									<hr class="light-grey-hr ma-0"/>
+									<a class="block text-center read-all" href="javascript:void(0)"> read all </a>
 									<div class="clearfix"></div>
 								</div>
 							</li>
 						</ul>
 					</li>
 					<li class="dropdown auth-drp">
-						<a class="dropdown-toggle pr-0" data-toggle="dropdown" href="#"><img alt="user_auth" class="user-auth-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png"><span class="user-online-status"></span></a>
+						<a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="https://campbellconsulting.github.io/hosting/dist/img/user1.png" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
 						<ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
 							<li>
 								<a href="profile.html"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
@@ -157,7 +210,7 @@
 							</li>
 							<li class="divider"></li>
 							<li class="sub-menu show-on-hover">
-								<a class="dropdown-toggle pr-0 level-2-drp" href="#"><i class="zmdi zmdi-check text-success"></i> available</a>
+								<a href="#" class="dropdown-toggle pr-0 level-2-drp"><i class="zmdi zmdi-check text-success"></i> available</a>
 								<ul class="dropdown-menu open-left-side">
 									<li>
 										<a href="#"><i class="zmdi zmdi-check text-success"></i><span>available</span></a>
@@ -168,7 +221,7 @@
 									<li>
 										<a href="#"><i class="zmdi zmdi-minus-circle-outline text-danger"></i><span>offline</span></a>
 									</li>
-								</ul>
+								</ul>	
 							</li>
 							<li class="divider"></li>
 							<li>
@@ -177,27 +230,25 @@
 						</ul>
 					</li>
 				</ul>
-			</div>
-		</nav><!-- /Top Menu Items -->
+			</div>	
+		</nav>
+		<!-- /Top Menu Items -->
+		
 		<!-- Left Sidebar Menu -->
 		<div class="fixed-sidebar-left">
 			<ul class="nav navbar-nav side-nav nicescroll-bar">
-				<li class="navigation-header"><span>Main</span> <i class="zmdi zmdi-more"></i></li>
+				<li class="navigation-header">
+					<span>Main</span> 
+					<i class="zmdi zmdi-more"></i>
+				</li>
 				<li>
-					<a class="active" data-target="#dashboard_dr" data-toggle="collapse" href="javascript:void(0);">
-					<div class="pull-left">
-						<i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span>
-					</div>
-					<div class="pull-right">
-						<i class="zmdi zmdi-caret-down"></i>
-					</div>
-					<div class="clearfix"></div></a>
-					<ul class="collapse collapse-level-1" id="dashboard_dr">
+					<a class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+					<ul id="dashboard_dr" class="collapse collapse-level-1">
 						<li>
 							<a class="active-page" href="index.html">Analytical</a>
 						</li>
 						<li>
-							<a href="index2.html">Demographic</a>
+							<a  href="index2.html">Demographic</a>
 						</li>
 						<li>
 							<a href="index3.html">Project</a>
@@ -207,93 +258,54 @@
 						</li>
 					</ul>
 				</li>
-				<li>
-					<hr class="light-grey-hr mb-10">
+				<li><hr class="light-grey-hr mb-10"/></li>
+				<li class="navigation-header">
+					<span>communication </span> 
+					<i class="zmdi zmdi-more"></i>
 				</li>
-				<li class="navigation-header"><span>communication</span> <i class="zmdi zmdi-more"></i></li>
-				<li>
-					<a href="chats.html">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-send mr-20"></i><span class="right-nav-text">chat</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
-				<li>
-					<a href="calendar.html">
-					<div class="pull-left">
-						<i class=" icon-calender mr-20"></i><span class="right-nav-text">calendar</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
-				<li>
-					<a href="inbox.html">
-					<div class="pull-left">
-						<i class=" glyphicon glyphicon-envelope mr-20"></i><span class="right-nav-text">Email</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
-				<li>
-					<a data-target="#contact_dr" data-toggle="collapse" href="javascript:void(0);">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-user mr-20"></i><span class="right-nav-text">Contacts</span>
-					</div>
-					<div class="pull-right">
-						<i class="zmdi zmdi-caret-down"></i>
-					</div>
-					<div class="clearfix"></div></a>
-					<ul class="collapse collapse-level-2" id="contact_dr">
 						<li>
-							<a href="contact-upload.html">Upload Contact</a>
+                            <a href="chats.html"><div class="pull-left"><i class="glyphicon glyphicon-send mr-20"></i><span class="right-nav-text">chat </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+						
 						</li>
 						<li>
-							<a href="contact-list.html">list</a>
+							 <a href="calendar.html"><div class="pull-left"><i class=" icon-calender mr-20"></i><span class="right-nav-text">calendar </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+						</li>
+                <li>
+							 <a href="inbox.html"><div class="pull-left"><i class=" glyphicon glyphicon-envelope mr-20"></i><span class="right-nav-text">Email </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
 						</li>
 						<li>
-							<a href="contact-card.html">cards</a>
+							<a href="javascript:void(0);" data-toggle="collapse" data-target="#contact_dr"><div class="pull-left"><i class="glyphicon glyphicon-user mr-20"></i><span class="right-nav-text">Contacts </span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+                        
+								<ul id="contact_dr" class="collapse collapse-level-2"> 									<li> 									<a href="contact-upload.html">Upload Contact</a> 								</li>      
+                                <li>
+									<a href="contact-list.html">list</a>
+								</li>
+								<li>
+									<a href="contact-card.html">cards</a>
+								</li>
+							</ul>
 						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="todo-tasklist.html">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-th-list mr-20"></i><span class="right-nav-text">To Do/Tasklist</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
-				<li>
-					<a href="timeline.html">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-list-alt mr-20"></i><span class="right-nav-text">My Day</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
-				<li>
-					<hr class="light-grey-hr mb-10">
-				</li>
-				<li class="navigation-header"><span>tools</span> <i class="zmdi zmdi-more"></i></li>
-				<li>
-					<a href="summernote-wysihtml5.html">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-pencil mr-20"></i><span class="right-nav-text">Forms</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
-				<li>
-					<a data-target="#chart_dr" data-toggle="collapse" href="javascript:void(0);">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-stats mr-20"></i><span class="right-nav-text">Reporting</span>
-					</div>
-					<div class="pull-right">
-						<i class="zmdi zmdi-caret-down"></i>
-					</div>
-					<div class="clearfix"></div></a>
-					<ul class="collapse collapse-level-1 two-col-list" id="chart_dr">
+					
+						<li>
+                             <a href="todo-tasklist.html"><div class="pull-left"><i class="glyphicon glyphicon-th-list mr-20"></i><span class="right-nav-text">To Do/Tasklist </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+							
+						</li>
+                	<li>
+                             <a href="timeline.html"><div class="pull-left"><i class="glyphicon glyphicon-list-alt mr-20"></i><span class="right-nav-text">My Day </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+							
+						</li>
+				
+				
+				
+				<li><hr class="light-grey-hr mb-10"/></li>
+				<li class="navigation-header">
+					<span>tools</span> 
+					<i class="zmdi zmdi-more"></i>
+                    <li>
+					  <a href="summernote-wysihtml5.html"><div class="pull-left"><i class="glyphicon glyphicon-pencil mr-20"></i><span class="right-nav-text">Forms </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+				</li> <li>
+					<a href="javascript:void(0);" data-toggle="collapse" data-target="#chart_dr"><div class="pull-left"><i class="glyphicon glyphicon-stats mr-20"></i><span class="right-nav-text">Reporting </span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+					<ul id="chart_dr" class="collapse collapse-level-1 two-col-list">
 						<li>
 							<a href="flot-chart.html">Flot Chart</a>
 						</li>
@@ -316,44 +328,43 @@
 							<a href="peity-chart.html">Peity Chart</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="file-manager.html">
-					<div class="pull-left">
-						<i class="glyphicon glyphicon-folder-open mr-20"></i><span class="right-nav-text">File Manager</span>
-					</div>
-					<div class="pull-right"></div>
-					<div class="clearfix"></div></a>
-				</li>
+                </li>
+                	<li>
+                             <a href="file-manager.html"><div class="pull-left"><i class="glyphicon glyphicon-folder-open mr-20"></i><span class="right-nav-text">File Manager </span></div><div class="pull-right"></div><div class="clearfix"></div></a>
+						</li>
+				
 			</ul>
-		</div><!-- /Left Sidebar Menu -->
+		</div>
+		<!-- /Left Sidebar Menu -->
+		
 		<!-- Right Sidebar Menu -->
 		<div class="fixed-sidebar-right">
 			<ul class="right-sidebar">
 				<li>
-					<div class="tab-struct custom-tab-1">
-						<ul class="nav nav-tabs" id="right_sidebar_tab" role="tablist">
-							<li class="active" role="presentation">
-								<a aria-expanded="true" data-toggle="tab" href="#chat_tab" id="chat_tab_btn" role="tab">chat</a>
-							</li>
-							<li class="" role="presentation">
-								<a aria-expanded="false" data-toggle="tab" href="#messages_tab" id="messages_tab_btn" role="tab">messages</a>
-							</li>
-							<li class="" role="presentation">
-								<a aria-expanded="false" data-toggle="tab" href="#todo_tab" id="todo_tab_btn" role="tab">todo</a>
-							</li>
+					<div  class="tab-struct custom-tab-1">
+						<ul role="tablist" class="nav nav-tabs" id="right_sidebar_tab">
+							<li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="chat_tab_btn" href="#chat_tab">chat</a></li>
+							<li role="presentation" class=""><a  data-toggle="tab" id="messages_tab_btn" role="tab" href="#messages_tab" aria-expanded="false">messages</a></li>
+							<li role="presentation" class=""><a  data-toggle="tab" id="todo_tab_btn" role="tab" href="#todo_tab" aria-expanded="false">todo</a></li>
 						</ul>
 						<div class="tab-content" id="right_sidebar_content">
-							<div class="tab-pane fade active in" id="chat_tab" role="tabpanel">
+							<div  id="chat_tab" class="tab-pane fade active in" role="tabpanel">
 								<div class="chat-cmplt-wrap">
 									<div class="chat-box-wrap">
 										<div class="add-friend">
-											<a class="inline-block txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-more"></i></a> <span class="inline-block txt-dark">users</span> <a class="inline-block text-right txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-plus"></i></a>
+											<a href="javascript:void(0)" class="inline-block txt-grey">
+												<i class="zmdi zmdi-more"></i>
+											</a>	
+											<span class="inline-block txt-dark">users</span>
+											<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="zmdi zmdi-plus"></i></a>
 											<div class="clearfix"></div>
 										</div>
-										<form class="chat-search pl-15 pr-15 pb-15" role="search">
+										<form role="search" class="chat-search pl-15 pr-15 pb-15">
 											<div class="input-group">
-												<input class="form-control" id="example-input1-group2" name="example-input1-group2" placeholder="Search" type="text"> <span class="input-group-btn"><button class="btn btn-default" type="button"><span class="input-group-btn"><i class="zmdi zmdi-search"></i></span></button></span>
+												<input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="Search">
+												<span class="input-group-btn">
+												<button type="button" class="btn  btn-default"><i class="zmdi zmdi-search"></i></button>
+												</span>
 											</div>
 										</form>
 										<div id="chat_list_scroll">
@@ -361,79 +372,105 @@
 												<ul class="chat-list-wrap">
 													<li class="chat-list">
 														<div class="chat-body">
-															<a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Kristina Lowe</span> <span class="time block truncate txt-grey">Are you free @ noon?</span>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Kristina Lowe</span>
+																		<span class="time block truncate txt-grey">Are you free @ noon?</span>
+																	</div>
+																	<div class="status away"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status away"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Philip Lane</span> <span class="time block truncate txt-grey">Lunch tomorrow?</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user1.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Philip Lane</span>
+																		<span class="time block truncate txt-grey">Lunch tomorrow?</span>
+																	</div>
+																	<div class="status offline"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status offline"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user2.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Glen Chambers</span> <span class="time block truncate txt-grey">Deans meeting moved to 4 pm on 5/16</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user2.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Glen Chambers</span>
+																		<span class="time block truncate txt-grey">Deans meeting moved to 4 pm on 5/16</span>
+																	</div>
+																	<div class="status online"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status online"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user3.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Riley Russell</span> <span class="time block truncate txt-grey">Thank you!</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user3.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Riley Russell</span>
+																		<span class="time block truncate txt-grey">Thank you!</span>
+																	</div>
+																	<div class="status online"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status online"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Lois Cooper</span> <span class="time block truncate txt-grey">ttyl</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Lois Cooper</span>
+																		<span class="time block truncate txt-grey">ttyl</span>
+																	</div>
+																	<div class="status offline"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status offline"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Max Baker</span> <span class="time block truncate txt-grey">Are you free in 5?</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user1.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Max Baker</span>
+																		<span class="time block truncate txt-grey">Are you free in 5?</span>
+																	</div>
+																	<div class="status online"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status online"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user2.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Francis Perkins</span> <span class="time block truncate txt-grey">Will you be attending the open house next weekend?</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user2.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Francis Perkins</span>
+																		<span class="time block truncate txt-grey">Will you be attending the open house next weekend?</span>
+																	</div>
+																	<div class="status away"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status away"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user3.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Amanda Armstrong</span> <span class="time block truncate txt-grey">Swing by my office at any point to pick up your tickets.</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user3.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Amanda Armstrong</span>
+																		<span class="time block truncate txt-grey">Swing by my office at any point to pick up your tickets.</span>
+																	</div>
+																	<div class="status online"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status online"></div>
-																<div class="clearfix"></div>
-															</div></a> <a href="javascript:void(0)">
-															<div class="chat-data">
-																<img alt="user" class="user-img img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user4.png">
-																<div class="user-data">
-																	<span class="name block capitalize-font">Ray Andrews</span> <span class="time block truncate txt-grey">sounds good</span>
+															</a>
+															<a  href="javascript:void(0)">
+																<div class="chat-data">
+																	<img class="user-img img-circle"  src="https://campbellconsulting.github.io/hosting/dist/img/user4.png" alt="user"/>
+																	<div class="user-data">
+																		<span class="name block capitalize-font">Ray Andrews</span>
+																		<span class="time block truncate txt-grey">sounds good</span>
+																	</div>
+																	<div class="status away"></div>
+																	<div class="clearfix"></div>
 																</div>
-																<div class="status away"></div>
-																<div class="clearfix"></div>
-															</div></a>
+															</a>
 														</div>
 													</li>
 												</ul>
@@ -444,7 +481,11 @@
 										<div class="recent-chat-wrap">
 											<div class="panel-heading ma-0">
 												<div class="goto-back">
-													<a class="inline-block txt-grey" href="javascript:void(0)" id="goto_back"><i class="zmdi zmdi-chevron-left"></i></a> <span class="inline-block txt-dark">ryan</span> <a class="inline-block text-right txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-more"></i></a>
+													<a  id="goto_back" href="javascript:void(0)" class="inline-block txt-grey">
+														<i class="zmdi zmdi-chevron-left"></i>
+													</a>	
+													<span class="inline-block txt-dark">ryan</span>
+													<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="zmdi zmdi-more"></i></a>
 													<div class="clearfix"></div>
 												</div>
 											</div>
@@ -454,7 +495,7 @@
 														<ul class="nicescroll-bar pt-20">
 															<li class="friend">
 																<div class="friend-msg-wrap">
-																	<img alt="user" class="user-img img-circle block pull-left" src="https://campbellconsulting.github.io/hosting/dist/img/user.png">
+																	<img class="user-img img-circle block pull-left"  src="https://campbellconsulting.github.io/hosting/dist/img/user.png" alt="user"/>
 																	<div class="msg pull-left">
 																		<p>Hello Jason, how are you?</p>
 																		<div class="msg-per-detail text-right">
@@ -462,66 +503,58 @@
 																		</div>
 																	</div>
 																	<div class="clearfix"></div>
-																</div>
+																</div>	
 															</li>
 															<li class="self mb-10">
 																<div class="self-msg-wrap">
-																	<div class="msg block pull-right">
-																		Oh, hi Sarah
+																	<div class="msg block pull-right"> Oh, hi Sarah
 																		<div class="msg-per-detail text-right">
 																			<span class="msg-time txt-grey">2:31 pm</span>
 																		</div>
 																	</div>
 																	<div class="clearfix"></div>
-																</div>
+																</div>	
 															</li>
 															<li class="self">
 																<div class="self-msg-wrap">
-																	<div class="msg block pull-right">
-																		How about you?
+																	<div class="msg block pull-right">  How about you?
 																		<div class="msg-per-detail text-right">
 																			<span class="msg-time txt-grey">2:31 pm</span>
 																		</div>
 																	</div>
 																	<div class="clearfix"></div>
-																</div>
+																</div>	
 															</li>
 															<li class="friend">
 																<div class="friend-msg-wrap">
-																	<img alt="user" class="user-img img-circle block pull-left" src="https://campbellconsulting.github.io/hosting/dist/img/user.png">
-																	<div class="msg pull-left">
+																	<img class="user-img img-circle block pull-left"  src="https://campbellconsulting.github.io/hosting/dist/img/user.png" alt="user"/>
+																	<div class="msg pull-left"> 
 																		<p>Not too bad.</p>
-																		<div class="msg-per-detail text-right">
+																		<div class="msg-per-detail  text-right">
 																			<span class="msg-time txt-grey">2:35 pm</span>
 																		</div>
 																	</div>
 																	<div class="clearfix"></div>
-																</div>
+																</div>	
 															</li>
 														</ul>
 													</div>
 													<div class="input-group">
-														<input class="input-msg-send form-control" id="input_msg_send" name="send-msg" placeholder="Type something" type="text">
+														<input type="text" id="input_msg_send" name="send-msg" class="input-msg-send form-control" placeholder="Type something">
 														<div class="input-group-btn emojis">
 															<div class="dropup">
-																<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><i class="zmdi zmdi-mood"></i></button>
+																<button type="button" class="btn  btn-default  dropdown-toggle" data-toggle="dropdown" ><i class="zmdi zmdi-mood"></i></button>
 																<ul class="dropdown-menu dropdown-menu-right">
-																	<li>
-																		<a href="javascript:void(0)">Action</a>
-																	</li>
-																	<li>
-																		<a href="javascript:void(0)">Another action</a>
-																	</li>
+																	<li><a href="javascript:void(0)">Action</a></li>
+																	<li><a href="javascript:void(0)">Another action</a></li>
 																	<li class="divider"></li>
-																	<li>
-																		<a href="javascript:void(0)">Separated link</a>
-																	</li>
+																	<li><a href="javascript:void(0)">Separated link</a></li>
 																</ul>
 															</div>
 														</div>
 														<div class="input-group-btn attachment">
-															<div class="fileupload btn btn-default">
-																<i class="zmdi zmdi-attachment-alt"></i> <input class="upload" type="file">
+															<div class="fileupload btn  btn-default"><i class="zmdi zmdi-attachment-alt"></i>
+																<input type="file" class="upload">
 															</div>
 														</div>
 													</div>
@@ -531,79 +564,129 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="messages_tab" role="tabpanel">
+								
+							<div id="messages_tab" class="tab-pane fade" role="tabpanel">
 								<div class="message-box-wrap">
 									<div class="msg-search">
-										<a class="inline-block txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-more"></i></a> <span class="inline-block txt-dark">messages</span> <a class="inline-block text-right txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-search"></i></a>
+										<a href="javascript:void(0)" class="inline-block txt-grey">
+											<i class="zmdi zmdi-more"></i>
+										</a>	
+										<span class="inline-block txt-dark">messages</span>
+										<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="zmdi zmdi-search"></i></a>
 										<div class="clearfix"></div>
 									</div>
 									<div class="set-height-wrap">
 										<div class="streamline message-box nicescroll-bar">
 											<a href="javascript:void(0)">
-											<div class="sl-item unread-message">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">Arlene Carroll</span> <span class="inline-block font-11 pull-right message-time">12:28 AM</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">Agenda for Tuesday's meeting</span>
-													<p class="txt-grey truncate">Looking forward to connecting on Tuesday...</p>
+												<div class="sl-item unread-message">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">Arlene Carroll</span>
+														<span class="inline-block font-11  pull-right message-time">12:28 AM</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject">Agenda for Tuesday's meeting</span>
+														<p class="txt-grey truncate">Looking forward to connecting on Tuesday...</p>
+													</div>
 												</div>
-											</div></a> <a href="javascript:void(0)">
-											<div class="sl-item">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">Todd Welch</span> <span class="inline-block font-11 pull-right message-time">1 Feb</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">Meeting Recap</span>
-													<p class="txt-grey truncate">Below you will find my notes from...</p>
+											</a>
+											<a href="javascript:void(0)">
+												<div class="sl-item">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">Todd Welch</span>
+														<span class="inline-block font-11  pull-right message-time">1 Feb</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject">Meeting Recap</span>
+														<p class="txt-grey truncate">Below you will find my notes from...</p>
+													</div>
 												</div>
-											</div></a> <a href="javascript:void(0)">
-											<div class="sl-item">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user2.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">Andy Palmer</span> <span class="inline-block font-11 pull-right message-time">31 Jan</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">Theater Event this Friday</span>
-													<p class="txt-grey truncate">ATTN: Tickets go on sale this afternoon at 3 pm...</p>
+											</a>
+											<a href="javascript:void(0)">
+												<div class="sl-item">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user2.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">Andy Palmer</span>
+														<span class="inline-block font-11  pull-right message-time">31 Jan</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject">Theater Event this Friday</span>
+														<p class="txt-grey truncate">ATTN: Tickets go on sale this afternoon at 3 pm...</p>
+													</div>
 												</div>
-											</div></a> <a href="javascript:void(0)">
-											<div class="sl-item unread-message">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user3.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">Brianna Newman</span> <span class="inline-block font-11 pull-right message-time">29 Jan</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">Pep Rally!!!</span>
-													<p class="txt-grey truncate">The new start time for the pep rally will be 4:30 pm...</p>
+											</a>
+											<a href="javascript:void(0)">
+												<div class="sl-item unread-message">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user3.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">Brianna Newman</span>
+														<span class="inline-block font-11  pull-right message-time">29 Jan</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject">Pep Rally!!!</span>
+														<p class="txt-grey truncate">The new start time for the pep rally will be 4:30 pm...</p>
+													</div>
 												</div>
-											</div></a> <a href="javascript:void(0)">
-											<div class="sl-item unread-message">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user4.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">Marcus Holmes</span> <span class="inline-block font-11 pull-right message-time">27 Jan</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">Updated department bio due</span>
-													<p class="txt-grey truncate">Please send ASAP</p>
+											</a>
+											<a href="javascript:void(0)">
+												<div class="sl-item unread-message">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user4.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">Marcus Holmes</span>
+														<span class="inline-block font-11  pull-right message-time">27 Jan</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject">Updated department bio due</span>
+														<p class="txt-grey truncate">Please send ASAP</p>
+													</div>
 												</div>
-											</div></a> <a href="javascript:void(0)">
-											<div class="sl-item">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">Tara Simmons</span> <span class="inline-block font-11 pull-right message-time">19 Jan</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">User Training tomorrow</span>
-													<p class="txt-grey truncate">Below you will find the dial in.</p>
+											</a>
+											<a href="javascript:void(0)">
+												<div class="sl-item">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">Tara Simmons</span>
+														<span class="inline-block font-11  pull-right message-time">19 Jan</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject">User Training tomorrow</span>
+														<p class="txt-grey truncate">Below you will find the dial in.</p>
+													</div>
 												</div>
-											</div></a> <a href="javascript:void(0)">
-											<div class="sl-item">
-												<div class="sl-avatar avatar avatar-sm avatar-circle"><img alt="avatar" class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png"></div>
-												<div class="sl-content">
-													<span class="inline-block capitalize-font pull-left message-per">John Freeman</span> <span class="inline-block font-11 pull-right message-time">13 Jan</span>
-													<div class="clearfix"></div><span class=" truncate message-subject">Fall Travel Schedule Due</span>
-													<p class="txt-grey truncate">The deadline for fall schedule requests will be 9/15/17...</p>
+											</a>
+											<a href="javascript:void(0)">
+												<div class="sl-item">
+													<div class="sl-avatar avatar avatar-sm avatar-circle">
+														<img class="img-responsive img-circle" src="https://campbellconsulting.github.io/hosting/dist/img/user1.png" alt="avatar"/>
+													</div>
+													<div class="sl-content">
+														<span class="inline-block capitalize-font   pull-left message-per">John Freeman</span>
+														<span class="inline-block font-11  pull-right message-time">13 Jan</span>
+														<div class="clearfix"></div>
+														<span class=" truncate message-subject"> Fall Travel Schedule Due</span>
+														<p class="txt-grey truncate">The deadline for fall schedule requests will be 9/15/17...</p>
+													</div>
 												</div>
-											</div></a>
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="todo_tab" role="tabpanel">
+							<div  id="todo_tab" class="tab-pane fade" role="tabpanel">
 								<div class="todo-box-wrap">
 									<div class="add-todo">
-										<a class="inline-block txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-more"></i></a> <span class="inline-block txt-dark">todo list</span> <a class="inline-block text-right txt-grey" href="javascript:void(0)"><i class="zmdi zmdi-plus"></i></a>
+										<a href="javascript:void(0)" class="inline-block txt-grey">
+											<i class="zmdi zmdi-more"></i>
+										</a>	
+										<span class="inline-block txt-dark">todo list</span>
+										<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="zmdi zmdi-plus"></i></a>
 										<div class="clearfix"></div>
 									</div>
 									<div class="set-height-wrap">
@@ -611,53 +694,60 @@
 										<ul class="todo-list nicescroll-bar">
 											<li class="todo-item">
 												<div class="checkbox checkbox-default">
-													<input id="checkbox01" type="checkbox"> <label for="checkbox01">Finalize High School Visitation</label>
+													<input type="checkbox" id="checkbox01"/>
+													<label for="checkbox01">Finalize High School Visitation</label>
 												</div>
 											</li>
 											<li>
-												<hr class="light-grey-hr">
+												<hr class="light-grey-hr"/>
 											</li>
 											<li class="todo-item">
 												<div class="checkbox checkbox-pink">
-													<input id="checkbox02" type="checkbox"> <label for="checkbox02">Register for Career Fair on 5/6/17</label>
+													<input type="checkbox" id="checkbox02"/>
+													<label for="checkbox02">Register for Career Fair on 5/6/17</label>
 												</div>
 											</li>
 											<li>
-												<hr class="light-grey-hr">
+												<hr class="light-grey-hr"/>
 											</li>
 											<li class="todo-item">
 												<div class="checkbox checkbox-warning">
-													<input id="checkbox03" type="checkbox"> <label for="checkbox03">Pick up flyers from printer</label>
+													<input type="checkbox" id="checkbox03" checked/>
+													<label for="checkbox03">Pick up flyers from printer</label>
 												</div>
 											</li>
 											<li>
-												<hr class="light-grey-hr">
+												<hr class="light-grey-hr"/>
 											</li>
 											<li class="todo-item">
 												<div class="checkbox checkbox-success">
-													<input id="checkbox04" type="checkbox"> <label for="checkbox04">Admissions Sync</label>
+													<input type="checkbox" id="checkbox04" checked/>
+													<label for="checkbox04">Admissions Sync</label>
 												</div>
 											</li>
 											<li>
-												<hr class="light-grey-hr">
+												<hr class="light-grey-hr"/>
 											</li>
 											<li class="todo-item">
 												<div class="checkbox checkbox-danger">
-													<input id="checkbox05" type="checkbox"> <label for="checkbox05">Intern Interview</label>
+													<input type="checkbox" id="checkbox05" checked/>
+													<label for="checkbox05">Intern Interview</label>
 												</div>
 											</li>
 											<li>
-												<hr class="light-grey-hr">
+												<hr class="light-grey-hr"/>
 											</li>
 											<li class="todo-item">
 												<div class="checkbox checkbox-purple">
-													<input id="checkbox06" type="checkbox"> <label for="checkbox06">Pick up cake for Kelly's bday</label>
+													<input type="checkbox" id="checkbox06" checked/>
+													<label for="checkbox06">Pick up cake for Kelly's bday</label>
 												</div>
 											</li>
 											<li>
-												<hr class="light-grey-hr">
+												<hr class="light-grey-hr"/>
 											</li>
-										</ul><!-- /Todo-List -->
+										</ul>
+										<!-- /Todo-List -->
 									</div>
 								</div>
 							</div>
@@ -665,14 +755,19 @@
 					</div>
 				</li>
 			</ul>
-		</div><!-- /Right Sidebar Menu -->
-		<!-- Main Content -->
+		</div>
+		<!-- /Right Sidebar Menu -->
+		
+		
+
+        <!-- Main Content -->
 		<div class="page-wrapper">
-			<div class="container-fluid pt-25">
+            <div class="container-fluid pt-25">
+				
 				<!-- Row -->
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-						<div class="panel panel-default card-view panel-refresh">
+                       <div class="panel panel-default card-view panel-refresh">
 							<div class="refresh-container">
 								<div class="la-anim-1"></div>
 							</div>
@@ -681,19 +776,15 @@
 									<h6 class="panel-title txt-dark">Visit by Traffic Types</h6>
 								</div>
 								<div class="pull-right">
-									<a class="pull-left inline-block refresh mr-15" href="#"><i class="zmdi zmdi-replay"></i></a>
+									<a href="#" class="pull-left inline-block refresh mr-15">
+										<i class="zmdi zmdi-replay"></i>
+									</a>
 									<div class="pull-left inline-block dropdown">
-										<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><i class="zmdi zmdi-more-vert"></i></a>
-										<ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-reply"></i>Devices</a>
-											</li>
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-share"></i>General</a>
-											</li>
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-trash"></i>Referral</a>
-											</li>
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
+										<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Devices</a></li>
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>General</a></li>
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>Referral</a></li>
 										</ul>
 									</div>
 								</div>
@@ -702,110 +793,156 @@
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
 									<div>
-										<canvas height="191" id="chart_6"></canvas>
-									</div>
-									<hr class="light-grey-hr row mt-10 mb-15">
+										<canvas id="chart_6" height="191"></canvas>
+									</div>	
+									<hr class="light-grey-hr row mt-10 mb-15"/>
 									<div class="label-chatrs">
 										<div class="">
-											<span class="clabels clabels-lg inline-block bg-blue mr-10 pull-left"></span> <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">44.46% organic</span><span class="block txt-grey">356 visits</span></span>
-											<div class="pull-right" id="sparkline_1" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+											<span class="clabels clabels-lg inline-block bg-blue mr-10 pull-left"></span>
+											<span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">44.46% organic</span><span class="block txt-grey">356 visits</span></span>
+											<div id="sparkline_1" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
 											<div class="clearfix"></div>
 										</div>
 									</div>
-									<hr class="light-grey-hr row mt-10 mb-15">
+									<hr class="light-grey-hr row mt-10 mb-15"/>
 									<div class="label-chatrs">
 										<div class="">
-											<span class="clabels clabels-lg inline-block bg-green mr-10 pull-left"></span> <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">5.54% Refrral</span><span class="block txt-grey">36 visits</span></span>
-											<div class="pull-right" id="sparkline_2" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+											<span class="clabels clabels-lg inline-block bg-green mr-10 pull-left"></span>
+											<span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">5.54% Refrral</span><span class="block txt-grey">36 visits</span></span>
+											<div id="sparkline_2" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
 											<div class="clearfix"></div>
 										</div>
 									</div>
-									<hr class="light-grey-hr row mt-10 mb-15">
+									<hr class="light-grey-hr row mt-10 mb-15"/>
 									<div class="label-chatrs">
 										<div class="">
-											<span class="clabels clabels-lg inline-block bg-yellow mr-10 pull-left"></span> <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">50% Other</span><span class="block txt-grey">245 visits</span></span>
-											<div class="pull-right" id="sparkline_3" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+											<span class="clabels clabels-lg inline-block bg-yellow mr-10 pull-left"></span>
+											<span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5">50% Other</span><span class="block txt-grey">245 visits</span></span>
+											<div id="sparkline_3" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
 											<div class="clearfix"></div>
 										</div>
 									</div>
-								</div>
+								</div>	
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 						<div class="panel panel-default card-view">
 							<div class="panel-wrapper collapse in">
-								<div class="panel-body sm-data-box-1">
-									<span class="uppercase-font weight-500 font-14 block text-center txt-dark">customer satisfaction</span>
+                                <div class="panel-body sm-data-box-1">
+									<span class="uppercase-font weight-500 font-14 block text-center txt-dark">customer satisfaction</span>	
 									<div class="cus-sat-stat weight-500 txt-success text-center mt-5">
 										<span class="counter-anim">93.13</span><span>%</span>
 									</div>
 									<div class="progress-anim mt-20">
 										<div class="progress">
-											<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="93.12" class="progress-bar progress-bar-success wow animated progress-animated" role="progressbar"></div>
+											<div class="progress-bar progress-bar-success wow animated progress-animated" role="progressbar" aria-valuenow="93.12" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
 									</div>
 									<ul class="flex-stat mt-5">
-										<li><span class="block">Previous</span> <span class="block txt-dark weight-500 font-15">79.82</span></li>
-										<li><span class="block">% Change</span> <span class="block txt-dark weight-500 font-15">+14.29</span></li>
-										<li><span class="block">Trend</span> <span class="block"><i class="zmdi zmdi-trending-up txt-success font-20"></i></span></li>
+										<li>
+											<span class="block">Previous</span>
+											<span class="block txt-dark weight-500 font-15">79.82</span>
+										</li>
+										<li>
+											<span class="block">% Change</span>
+											<span class="block txt-dark weight-500 font-15">+14.29</span>
+										</li>
+										<li>
+											<span class="block">Trend</span>
+											<span class="block">
+												<i class="zmdi zmdi-trending-up txt-success font-20"></i>
+											</span>
+										</li>
 									</ul>
 								</div>
-							</div>
-						</div>
+                            </div>
+                        </div>
 						<div class="panel panel-default card-view">
 							<div class="panel-heading">
 								<div class="pull-left">
 									<h6 class="panel-title txt-dark">browser stats</h6>
 								</div>
 								<div class="pull-right">
-									<a class="pull-left inline-block mr-15" href="#"><i class="zmdi zmdi-download"></i></a> <a class="pull-left inline-block close-panel" data-effect="fadeOut" href="#"><i class="zmdi zmdi-close"></i></a>
+									<a href="#" class="pull-left inline-block mr-15">
+										<i class="zmdi zmdi-download"></i>
+									</a>
+									<a href="#" class="pull-left inline-block close-panel" data-effect="fadeOut">
+										<i class="zmdi zmdi-close"></i>
+									</a>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
 									<div>
-										<span class="pull-left inline-block capitalize-font txt-dark">google chrome</span> <span class="label label-warning pull-right">50%</span>
+										<span class="pull-left inline-block capitalize-font txt-dark">
+											google chrome
+										</span>
+										<span class="label label-warning pull-right">50%</span>
 										<div class="clearfix"></div>
-										<hr class="light-grey-hr row mt-10 mb-10">
-										<span class="pull-left inline-block capitalize-font txt-dark">mozila firefox</span> <span class="label label-danger pull-right">10%</span>
+										<hr class="light-grey-hr row mt-10 mb-10"/>
+										<span class="pull-left inline-block capitalize-font txt-dark">
+											mozila firefox
+										</span>
+										<span class="label label-danger pull-right">10%</span>
 										<div class="clearfix"></div>
-										<hr class="light-grey-hr row mt-10 mb-10">
-										<span class="pull-left inline-block capitalize-font txt-dark">Internet explorer</span> <span class="label label-success pull-right">30%</span>
+										<hr class="light-grey-hr row mt-10 mb-10"/>
+										<span class="pull-left inline-block capitalize-font txt-dark">
+											Internet explorer
+										</span>
+										<span class="label label-success pull-right">30%</span>
 										<div class="clearfix"></div>
-										<hr class="light-grey-hr row mt-10 mb-10">
-										<span class="pull-left inline-block capitalize-font txt-dark">safari</span> <span class="label label-primary pull-right">10%</span>
+										<hr class="light-grey-hr row mt-10 mb-10"/>
+										<span class="pull-left inline-block capitalize-font txt-dark">
+											safari
+										</span>
+										<span class="label label-primary pull-right">10%</span>
 										<div class="clearfix"></div>
 									</div>
-								</div>
+								</div>	
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-						<div class="panel panel-default card-view">
+                        <div class="panel panel-default card-view">
 							<div class="panel-heading">
 								<div class="pull-left">
 									<h6 class="panel-title txt-dark">user statistics</h6>
 								</div>
 								<div class="pull-right">
-									<span class="no-margin-switcher"><input class="js-switch" data-color="#ea6c41" data-secondary-color="#177ec1" data-size="small" id="morris_switch" type="checkbox"></span>
+									<span class="no-margin-switcher">
+										<input type="checkbox" id="morris_switch"  class="js-switch" data-color="#ea6c41" data-secondary-color="#177ec1" data-size="small"/>	
+									</span>	
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="panel-wrapper collapse in">
-								<div class="panel-body">
-									<div class="morris-chart" id="morris_extra_line_chart" style="height:293px;"></div>
+                                <div class="panel-body">
+									<div id="morris_extra_line_chart" class="morris-chart" style="height:293px;"></div>
 									<ul class="flex-stat mt-40">
-										<li><span class="block">Weekly Users</span> <span class="block txt-dark weight-500 font-18"><span class="counter-anim">3,24,222</span></span></li>
-										<li><span class="block">Monthly Users</span> <span class="block txt-dark weight-500 font-18"><span class="counter-anim">1,23,432</span></span></li>
-										<li><span class="block">Trend</span> <span class="block"><i class="zmdi zmdi-trending-up txt-success font-24"></i></span></li>
+										<li>
+											<span class="block">Weekly Users</span>
+											<span class="block txt-dark weight-500 font-18"><span class="counter-anim">3,24,222</span></span>
+										</li>
+										<li>
+											<span class="block">Monthly Users</span>
+											<span class="block txt-dark weight-500 font-18"><span class="counter-anim">1,23,432</span></span>
+										</li>
+										<li>
+											<span class="block">Trend</span>
+											<span class="block">
+												<i class="zmdi zmdi-trending-up txt-success font-24"></i>
+											</span>
+										</li>
 									</ul>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div><!-- /Row -->
+                        </div>
+                    </div>
+				</div>
+				<!-- /Row -->
+				
 				<!-- Row -->
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -816,12 +953,13 @@
 										<div class="container-fluid">
 											<div class="row">
 												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-													<span class="txt-light block counter"><span class="counter-anim">914,001</span></span> <span class="weight-500 uppercase-font txt-light block font-13">visits</span>
+													<span class="txt-light block counter"><span class="counter-anim">914,001</span></span>
+													<span class="weight-500 uppercase-font txt-light block font-13">visits</span>
 												</div>
-												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-right">
+												<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
 													<i class="zmdi zmdi-male-female txt-light data-right-rep-icon"></i>
 												</div>
-											</div>
+											</div>	
 										</div>
 									</div>
 								</div>
@@ -836,12 +974,13 @@
 										<div class="container-fluid">
 											<div class="row">
 												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-													<span class="txt-light block counter"><span class="counter-anim">46.41</span>%</span> <span class="weight-500 uppercase-font txt-light block">bounce rate</span>
+													<span class="txt-light block counter"><span class="counter-anim">46.41</span>%</span>
+													<span class="weight-500 uppercase-font txt-light block">bounce rate</span>
 												</div>
-												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-right">
+												<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
 													<i class="zmdi zmdi-redo txt-light data-right-rep-icon"></i>
 												</div>
-											</div>
+											</div>	
 										</div>
 									</div>
 								</div>
@@ -856,12 +995,13 @@
 										<div class="container-fluid">
 											<div class="row">
 												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-													<span class="txt-light block counter"><span class="counter-anim">4,054,876</span></span> <span class="weight-500 uppercase-font txt-light block">pageviews</span>
+													<span class="txt-light block counter"><span class="counter-anim">4,054,876</span></span>
+													<span class="weight-500 uppercase-font txt-light block">pageviews</span>
 												</div>
-												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-right">
+												<div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
 													<i class="zmdi zmdi-file txt-light data-right-rep-icon"></i>
 												</div>
-											</div>
+											</div>	
 										</div>
 									</div>
 								</div>
@@ -876,19 +1016,22 @@
 										<div class="container-fluid">
 											<div class="row">
 												<div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-													<span class="txt-light block counter"><span class="counter-anim">46.43</span>%</span> <span class="weight-500 uppercase-font txt-light block">growth rate</span>
+													<span class="txt-light block counter"><span class="counter-anim">46.43</span>%</span>
+													<span class="weight-500 uppercase-font txt-light block">growth rate</span>
 												</div>
-												<div class="col-xs-6 text-center pl-0 pr-0 pt-25 data-wrap-right">
+												<div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">
 													<div id="sparkline_4" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
 												</div>
-											</div>
+											</div>	
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div><!-- /Row -->
+				</div>
+				<!-- /Row -->
+				
 				<!-- Row -->
 				<div class="row">
 					<div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
@@ -901,19 +1044,18 @@
 									<h6 class="panel-title txt-dark">social campaigns</h6>
 								</div>
 								<div class="pull-right">
-									<a class="pull-left inline-block refresh mr-15" href="#"><i class="zmdi zmdi-replay"></i></a> <a class="pull-left inline-block full-screen mr-15" href="#"><i class="zmdi zmdi-fullscreen"></i></a>
+									<a href="#" class="pull-left inline-block refresh mr-15">
+										<i class="zmdi zmdi-replay"></i>
+									</a>
+									<a href="#" class="pull-left inline-block full-screen mr-15">
+										<i class="zmdi zmdi-fullscreen"></i>
+									</a>
 									<div class="pull-left inline-block dropdown">
-										<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><i class="zmdi zmdi-more-vert"></i></a>
-										<ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-reply"></i>Edit</a>
-											</li>
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-share"></i>Delete</a>
-											</li>
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-trash"></i>New</a>
-											</li>
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
+										<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>Edit</a></li>
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>Delete</a></li>
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>New</a></li>
 										</ul>
 									</div>
 								</div>
@@ -938,42 +1080,62 @@
 														<td><span class="txt-dark weight-500">Facebook</span></td>
 														<td>Beavis</td>
 														<td><span class="txt-success"><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>2.43%</span></span></td>
-														<td><span class="txt-dark weight-500">$1478</span></td>
-														<td><span class="label label-primary">Active</span></td>
+														<td>
+															<span class="txt-dark weight-500">$1478</span>
+														</td>
+														<td>
+															<span class="label label-primary">Active</span>
+														</td>
 													</tr>
 													<tr>
 														<td><span class="txt-dark weight-500">Youtube</span></td>
 														<td>Felix</td>
 														<td><span class="txt-success"><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>1.43%</span></span></td>
-														<td><span class="txt-dark weight-500">$951</span></td>
-														<td><span class="label label-danger">Closed</span></td>
+														<td>
+															<span class="txt-dark weight-500">$951</span>
+														</td>
+														<td>
+															<span class="label label-danger">Closed</span>
+														</td>
 													</tr>
 													<tr>
 														<td><span class="txt-dark weight-500">Twitter</span></td>
 														<td>Cannibus</td>
 														<td><span class="txt-danger"><i class="zmdi zmdi-caret-down mr-10 font-20"></i><span>-8.43%</span></span></td>
-														<td><span class="txt-dark weight-500">$632</span></td>
-														<td><span class="label label-default">Hold</span></td>
+														<td>
+															<span class="txt-dark weight-500">$632</span>
+														</td>
+														<td>
+															<span class="label label-default">Hold</span>
+														</td>
 													</tr>
 													<tr>
 														<td><span class="txt-dark weight-500">Spotify</span></td>
 														<td>Neosoft</td>
 														<td><span class="txt-success"><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>7.43%</span></span></td>
-														<td><span class="txt-dark weight-500">$325</span></td>
-														<td><span class="label label-default">Hold</span></td>
+														<td>
+															<span class="txt-dark weight-500">$325</span>
+														</td>
+														<td>
+															<span class="label label-default">Hold</span>
+														</td>
 													</tr>
 													<tr>
 														<td><span class="txt-dark weight-500">Instagram</span></td>
 														<td>Hencework</td>
 														<td><span class="txt-success"><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>9.43%</span></span></td>
-														<td><span class="txt-dark weight-500">$258</span></td>
-														<td><span class="label label-primary">Active</span></td>
+														<td>
+															<span class="txt-dark weight-500">$258</span>
+														</td>
+														<td>
+															<span class="label label-primary">Active</span>
+														</td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
-									</div>
-								</div>
+									</div>	
+								</div>	
 							</div>
 						</div>
 					</div>
@@ -987,19 +1149,15 @@
 									<h6 class="panel-title txt-dark">Advertising & Promotions</h6>
 								</div>
 								<div class="pull-right">
-									<a class="pull-left inline-block refresh mr-15" href="#"><i class="zmdi zmdi-replay"></i></a>
+									<a href="#" class="pull-left inline-block refresh mr-15">
+										<i class="zmdi zmdi-replay"></i>
+									</a>
 									<div class="pull-left inline-block dropdown">
-										<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><i class="zmdi zmdi-more-vert"></i></a>
-										<ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-reply"></i>option 1</a>
-											</li>
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-share"></i>option 2</a>
-											</li>
-											<li role="presentation">
-												<a href="javascript:void(0)" role="menuitem"><i aria-hidden="true" class="icon wb-trash"></i>option 3</a>
-											</li>
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="zmdi zmdi-more-vert"></i></a>
+										<ul class="dropdown-menu bullet dropdown-menu-right"  role="menu">
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-reply" aria-hidden="true"></i>option 1</a></li>
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-share" aria-hidden="true"></i>option 2</a></li>
+											<li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>option 3</a></li>
 										</ul>
 									</div>
 								</div>
@@ -1008,85 +1166,92 @@
 							<div class="panel-wrapper collapse in">
 								<div class="panel-body">
 									<div>
-										<canvas height="253" id="chart_2"></canvas>
-									</div>
+										<canvas id="chart_2" height="253"></canvas>
+									</div>	
 									<div class="label-chatrs mt-30">
 										<div class="inline-block mr-15">
-											<span class="clabels inline-block bg-yellow mr-5"></span> <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Active</span>
+											<span class="clabels inline-block bg-yellow mr-5"></span>
+											<span class="clabels-text font-12 inline-block txt-dark capitalize-font">Active</span>
 										</div>
 										<div class="inline-block mr-15">
-											<span class="clabels inline-block bg-red mr-5"></span> <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Closed</span>
-										</div>
+											<span class="clabels inline-block bg-red mr-5"></span>
+											<span class="clabels-text font-12 inline-block txt-dark capitalize-font">Closed</span>
+										</div>	
 										<div class="inline-block">
-											<span class="clabels inline-block bg-green mr-5"></span> <span class="clabels-text font-12 inline-block txt-dark capitalize-font">Hold</span>
-										</div>
+											<span class="clabels inline-block bg-green mr-5"></span>
+											<span class="clabels-text font-12 inline-block txt-dark capitalize-font">Hold</span>
+										</div>											
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div><!-- Row -->
-			</div><!-- Footer -->
+							</div>	
+						</div>	
+					</div>	
+				</div>	
+				<!-- Row -->
+			</div>
+			
+			<!-- Footer -->
 			<footer class="footer container-fluid pl-30 pr-30">
 				<div class="row">
 					<div class="col-sm-12">
 						<p>Powered by Alumnus @ 2017</p>
 					</div>
 				</div>
-			</footer><!-- /Footer -->
-		</div><!-- /Main Content -->
-	</div><!-- /#wrapper -->
+			</footer>
+			<!-- /Footer -->
+			
+		</div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /#wrapper -->
+	
 	<!-- JavaScript -->
-	<!-- jQuery -->
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/jquery/dist/jquery.min.js">
-	</script> <!-- Bootstrap Core JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js">
-	</script> <!-- Data table JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js">
-	</script> <!-- Slimscroll JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/dist/js/jquery.slimscroll.js">
-	</script> <!-- simpleWeather JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/moment/min/moment.min.js">
-	</script> 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js">
-	</script> 
-	<script src="https://campbellconsulting.github.io/hosting/dist/js/simpleweather-data.js">
-	</script> <!-- Progressbar Animation JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js">
-	</script> 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/jquery.counterup/jquery.counterup.min.js">
-	</script> <!-- Fancy Dropdown JS -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/dist/js/dropdown-bootstrap-extended.js">
-	</script> <!-- Sparkline JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/jquery.sparkline/dist/jquery.sparkline.min.js">
-	</script> <!-- Owl JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js">
-	</script> <!-- ChartJS JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/chart.js/Chart.min.js">
-	</script> <!-- Morris Charts JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/raphael/raphael.min.js">
-	</script> 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/morris.js/morris.min.js">
-	</script> 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js">
-	</script> <!-- Switchery JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/vendors/bower_components/switchery/dist/switchery.min.js">
-	</script> <!-- Init JavaScript -->
-	 
-	<script src="https://campbellconsulting.github.io/hosting/dist/js/init.js">
-	</script> 
-	<script src="https://campbellconsulting.github.io/hosting/dist/js/dashboard-data.js">
-	</script>
+	
+    <!-- jQuery -->
+    <script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+	<!-- Data table JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+	
+	<!-- Slimscroll JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/dist/js/jquery.slimscroll.js"></script>
+	
+	<!-- simpleWeather JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/moment/min/moment.min.js"></script>
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/dist/js/simpleweather-data.js"></script>
+	
+	<!-- Progressbar Animation JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+	
+	<!-- Fancy Dropdown JS -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/dist/js/dropdown-bootstrap-extended.js"></script>
+	
+	<!-- Sparkline JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+	
+	<!-- Owl JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+	
+	<!-- ChartJS JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/chart.js/Chart.min.js"></script>
+	
+	<!-- Morris Charts JavaScript -->
+    <script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/raphael/raphael.min.js"></script>
+    <script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/morris.js/morris.min.js"></script>
+    <script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+	
+	<!-- Switchery JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/vendors/bower_components/switchery/dist/switchery.min.js"></script>
+	
+	<!-- Init JavaScript -->
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/dist/js/init.js"></script>
+	<script src="https://raw.githubusercontent.com/campbellconsulting/hosting/master/dist/js/dashboard-data.js"></script>
 </body>
+
 </html>
